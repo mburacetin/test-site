@@ -157,7 +157,7 @@
       background:
         linear-gradient(90deg, rgba(3,9,15,.82) 0%, rgba(3,9,15,.60) 35%, rgba(3,9,15,.20) 62%, rgba(3,9,15,.08) 100%),
         linear-gradient(180deg, rgba(2,7,12,.15), rgba(2,7,12,.45)),
-        url("images/hero-arrival.jpg") center/cover no-repeat;
+        url("images/hero-arrival.jpeg") center/cover no-repeat;
     }
 
     .hero::before {
@@ -264,8 +264,7 @@
     .timeline-item,
     .sustain-card,
     .contact-card,
-    .stat-card,
-    .floating-badge {
+    .stat-card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -389,16 +388,11 @@
       color: var(--muted);
     }
 
-    .grid-2,
-    .grid-3,
-    .grid-4 {
+    .grid-3 {
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
-
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
     .card {
       padding: 24px;
@@ -750,10 +744,7 @@
         grid-template-columns: 1fr;
       }
 
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
+      .grid-3,
       .menu-grid {
         grid-template-columns: 1fr;
       }
@@ -780,9 +771,7 @@
       }
 
       .stats,
-      .grid-2,
-      .grid-3,
-      .grid-4 {
+      .grid-3 {
         grid-template-columns: 1fr;
       }
 
@@ -807,7 +796,7 @@
       <div class="brand">
         <div class="brand-badge">⚓</div>
         <div>
-          <h1>The Keeper's Catch</h1>
+          <h1>The Keeper’s Catch</h1>
           <p>Casquets Lighthouse Dining Experience</p>
         </div>
       </div>
@@ -858,7 +847,7 @@
 
         <aside class="hero-panel">
           <div class="panel-image">
-            <img src="images/concept-lighthouse.jpg" alt="Deniz feneri ve su altı restoran konsepti">
+            <img src="images/concept-lighthouse.jpeg" alt="Deniz feneri ve su altı restoran konsepti">
           </div>
           <h3>Konsept Özeti</h3>
           <p>
@@ -939,7 +928,7 @@
 
         <div class="experience-grid">
           <div class="image-banner">
-            <img src="images/reception-dock.jpg" alt="Kıyıdaki karşılama ve iskele alanı">
+            <img src="images/reception-dock.jpeg" alt="Kıyıdaki karşılama ve iskele alanı">
           </div>
 
           <div class="timeline">
@@ -992,7 +981,7 @@
 
         <div class="gallery-grid">
           <article class="gallery-card tall">
-            <img src="images/lighthouse-rock.jpg" alt="Kayalık üzerinde deniz feneri manzarası">
+            <img src="images/lighthouse-rock.png" alt="Kayalık üzerinde deniz feneri manzarası">
             <div class="gallery-overlay">
               <h4>Casquets İlhamı</h4>
               <p>
@@ -1003,7 +992,7 @@
 
           <div class="gallery-stack">
             <article class="gallery-card">
-              <img src="images/coral-wide.jpg" alt="Su altı mercan ve ekosistem görüntüsü">
+              <img src="images/coral-close.png" alt="Su altı mercan ve ekosistem görüntüsü">
               <div class="gallery-overlay">
                 <h4>Su Altı Atmosferi</h4>
                 <p>Localar, deniz yaşamını panoramik biçimde deneyimleten etkileyici bir altyapı sunar.</p>
@@ -1011,7 +1000,7 @@
             </article>
 
             <article class="gallery-card">
-              <img src="images/fish-reef.jpg" alt="Renkli balıklar ve mercanlar">
+              <img src="images/fish-reef.png" alt="Renkli balıklar ve mercanlar">
               <div class="gallery-overlay">
                 <h4>Canlı Deniz Yaşamı</h4>
                 <p>Konsept, mekân deneyimini yalnızca tasarım değil doğal yaşam gözlemiyle de güçlendirir.</p>
@@ -1070,7 +1059,7 @@
     <section>
       <div class="container luxury-grid reveal">
         <article class="image-banner">
-          <img src="images/champagne.jpg" alt="Buz içinde şampanya şişeleri">
+          <img src="images/champagne.png" alt="Buz içinde şampanya şişeleri">
         </article>
 
         <article class="card">
@@ -1140,12 +1129,12 @@
 
           <div class="sustain-gallery">
             <div class="sustain-image large">
-              <img src="images/coral-close.jpg" alt="Mercan resifi ve deniz yaşamı">
+              <img src="images/coral-close.png" alt="Mercan resifi ve deniz yaşamı">
               <div class="image-label">Ekosistem destekli su altı yaşamı</div>
             </div>
 
             <div class="sustain-image">
-              <img src="images/fish-reef.jpg" alt="Balıklar ve mercan resifi">
+              <img src="images/fish-reef.png" alt="Balıklar ve mercan resifi">
               <div class="image-label">Yapay resif ve yuvalama alanı vizyonu</div>
             </div>
           </div>
