@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Keeper's Catch | Casquets Deniz Feneri Deneyim Restoranı</title>
   <meta name="description" content="The Keeper's Catch - Casquets Deniz Feneri Deneyim Restoranı. Deniz feneri, su altı loca alanları, balık avı deneyimi ve sürdürülebilirlik odaklı yenilikçi restoran konsepti." />
+
   <style>
     :root {
       --bg: #06111b;
@@ -22,8 +23,15 @@
       --header-h: 82px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: Inter, Arial, Helvetica, sans-serif;
@@ -53,8 +61,15 @@
       z-index: 0;
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
       width: min(calc(100% - 32px), var(--max));
@@ -237,7 +252,9 @@
       transition: .25s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
     .btn-primary {
       color: #062437;
@@ -257,7 +274,13 @@
       gap: 16px;
     }
 
-    .stat-card, .hero-panel, .card, .image-card, .timeline-item, .sustain-card, .contact-card {
+    .stat-card,
+    .hero-panel,
+    .card,
+    .image-card,
+    .timeline-item,
+    .sustain-card,
+    .contact-card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -277,7 +300,12 @@
       margin-bottom: 5px;
     }
 
-    .stat-card span, .card p, .timeline-item p, .sustain-card p, .contact-card p, .image-card p {
+    .stat-card span,
+    .card p,
+    .timeline-item p,
+    .sustain-card p,
+    .contact-card p,
+    .image-card p {
       color: var(--muted);
     }
 
@@ -294,7 +322,10 @@
       margin-bottom: 18px;
     }
 
-    .panel-image img, .image-card img, .image-banner img, .sustain-image img {
+    .panel-image img,
+    .image-card img,
+    .image-banner img,
+    .sustain-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -308,16 +339,21 @@
       transform: scale(1.05);
     }
 
-    .quick-points, .muted-list {
+    .quick-points,
+    .muted-list {
       list-style: none;
       display: grid;
       gap: 10px;
       margin-top: 12px;
     }
 
-    .quick-points li, .muted-list li { color: var(--muted); }
+    .quick-points li,
+    .muted-list li {
+      color: var(--muted);
+    }
 
-    .quick-points li::before, .muted-list li::before {
+    .quick-points li::before,
+    .muted-list li::before {
       content: "• ";
       color: var(--accent);
       font-weight: 900;
@@ -353,17 +389,27 @@
       gap: 18px;
     }
 
-    .card, .timeline-item, .sustain-card, .contact-card {
+    .card,
+    .timeline-item,
+    .sustain-card,
+    .contact-card {
       padding: 24px;
       transition: transform .25s ease, border-color .25s ease;
     }
 
-    .card:hover, .timeline-item:hover, .sustain-card:hover, .contact-card:hover {
+    .card:hover,
+    .timeline-item:hover,
+    .sustain-card:hover,
+    .contact-card:hover {
       transform: translateY(-4px);
       border-color: rgba(115,213,255,.23);
     }
 
-    .card h4, .timeline-item h4, .sustain-card h4, .contact-card h4, .image-card h4 {
+    .card h4,
+    .timeline-item h4,
+    .sustain-card h4,
+    .contact-card h4,
+    .image-card h4 {
       font-size: 1.13rem;
       margin-bottom: 10px;
     }
@@ -384,7 +430,10 @@
       font-size: .88rem;
     }
 
-    .experience-grid, .luxury-grid, .sustain-layout, .contact-layout {
+    .experience-grid,
+    .luxury-grid,
+    .sustain-layout,
+    .contact-layout {
       display: grid;
       grid-template-columns: 1.02fr .98fr;
       gap: 18px;
@@ -453,7 +502,8 @@
       background: linear-gradient(180deg, transparent, rgba(4,10,16,.9));
     }
 
-    .sustain-cards, .sustain-gallery {
+    .sustain-cards,
+    .sustain-gallery {
       display: grid;
       gap: 18px;
     }
@@ -471,7 +521,9 @@
       min-height: 390px;
     }
 
-    .sustain-image img { filter: brightness(.85); }
+    .sustain-image img {
+      filter: brightness(.85);
+    }
 
     .image-label {
       position: absolute;
@@ -508,6 +560,50 @@
       background: rgba(255,255,255,.045);
       color: var(--text);
       outline: none;
+      transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    .booking-form input::placeholder,
+    .booking-form textarea::placeholder {
+      color: rgba(238,247,251,.52);
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      border-color: rgba(115,213,255,.45);
+      box-shadow: 0 0 0 4px rgba(115,213,255,.10);
+      background: rgba(255,255,255,.065);
+    }
+
+    .booking-form select {
+      cursor: pointer;
+      color: var(--text);
+      background-color: #0b1d2c;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+        linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+      background-position:
+        calc(100% - 22px) 50%,
+        calc(100% - 16px) 50%;
+      background-size:
+        6px 6px,
+        6px 6px;
+      background-repeat: no-repeat;
+      padding-right: 46px;
+    }
+
+    .booking-form select option {
+      background: #0b1d2c;
+      color: #eef7fb;
+      padding: 12px;
+    }
+
+    .booking-form select option:first-child {
+      color: #8da2b3;
     }
 
     .booking-form textarea {
@@ -524,6 +620,12 @@
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #062437;
       box-shadow: 0 12px 24px rgba(115,213,255,.22);
+      transition: transform .25s ease, filter .25s ease;
+    }
+
+    .booking-form button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
     }
 
     .footer {
@@ -554,38 +656,79 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes glowPulse {
-      0%,100% { opacity:.55; }
-      50% { opacity:.9; }
+      0%,100% {
+        opacity:.55;
+      }
+      50% {
+        opacity:.9;
+      }
     }
 
     @media (max-width: 1100px) {
-      .hero-grid, .experience-grid, .showcase-grid, .luxury-grid, .sustain-layout, .contact-layout, .grid-3 {
+      .hero-grid,
+      .experience-grid,
+      .showcase-grid,
+      .luxury-grid,
+      .sustain-layout,
+      .contact-layout,
+      .grid-3 {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 760px) {
-      body { padding-top: 98px; }
+      body {
+        padding-top: 98px;
+      }
+
       .nav {
         flex-direction: column;
         align-items: flex-start;
         padding: 16px 0;
       }
-      .nav-links { justify-content:flex-start; }
-      .hero { min-height:auto; }
-      .hero-grid { padding:84px 0 56px; }
-      .stats { grid-template-columns:1fr; }
-      .timeline-item { grid-template-columns:1fr; }
-      .image-card.tall { min-height:320px; }
-      .section-head { align-items:start; }
+
+      .nav-links {
+        justify-content:flex-start;
+      }
+
+      .hero {
+        min-height:auto;
+      }
+
+      .hero-grid {
+        padding:84px 0 56px;
+      }
+
+      .stats {
+        grid-template-columns:1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns:1fr;
+      }
+
+      .image-card.tall {
+        min-height:320px;
+      }
+
+      .section-head {
+        align-items:start;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="site-header" id="siteHeader">
     <div class="container nav">
@@ -596,6 +739,7 @@
           <p>Casquets Deniz Feneri Deneyim Restoranı</p>
         </div>
       </div>
+
       <nav class="nav-links">
         <a href="#konsept">Konsept</a>
         <a href="#deneyim">Deneyimimiz</a>
@@ -612,21 +756,42 @@
         <div class="hero-copy">
           <div class="eyebrow">Deniz feneri, su altı locaları ve deneyim odaklı restoran konsepti</div>
           <h2>Denizin içinde tasarladığımız unutulmaz bir akşam.</h2>
-          <p class="lead">Biz, The Keeper's Catch konseptiyle Casquets kayası ve deniz fenerinden ilham alarak misafirlerimize yalnızca bir restoran değil, deneyim odaklı bir yaşam alanı sunuyoruz. Misafirlerimizi kıyıdaki karşılama alanımızda ağırlıyor, balık avı deneyimine dahil ediyor ve ardından su altı loca alanlarımızda ya da panoramik deniz feneri barımızda unutulmaz bir akşam yaşamalarını hedefliyoruz.</p>
+          <p class="lead">
+            Biz, The Keeper's Catch konseptiyle Casquets kayası ve deniz fenerinden ilham alarak misafirlerimize yalnızca bir restoran değil,
+            deneyim odaklı bir yaşam alanı sunuyoruz. Misafirlerimizi kıyıdaki karşılama alanımızda ağırlıyor, balık avı deneyimine dahil ediyor
+            ve ardından su altı loca alanlarımızda ya da panoramik deniz feneri barımızda unutulmaz bir akşam yaşamalarını hedefliyoruz.
+          </p>
+
           <div class="hero-actions">
             <a href="#rezervasyon" class="btn btn-primary">Rezervasyon Talebi</a>
             <a href="#mekanlar" class="btn btn-secondary">Mekanları Keşfet</a>
           </div>
+
           <div class="stats">
-            <div class="stat-card"><strong>Deneyim Odaklı</strong><span>Misafiri sürece dahil eden servis modeli</span></div>
-            <div class="stat-card"><strong>Su Altı Loca</strong><span>Birbirine bağlı tüp modüller</span></div>
-            <div class="stat-card"><strong>Ekosistem Katkısı</strong><span>Atık dönüşümü ve deniz temizleme desteği</span></div>
+            <div class="stat-card">
+              <strong>Deneyim Odaklı</strong>
+              <span>Misafiri sürece dahil eden servis modeli</span>
+            </div>
+            <div class="stat-card">
+              <strong>Su Altı Loca</strong>
+              <span>Birbirine bağlı tüp modüller</span>
+            </div>
+            <div class="stat-card">
+              <strong>Ekosistem Katkısı</strong>
+              <span>Atık dönüşümü ve deniz temizleme desteği</span>
+            </div>
           </div>
         </div>
+
         <aside class="hero-panel">
-          <div class="panel-image"><img src="images/loca.png" alt="Su altı özel loca alanı"></div>
+          <div class="panel-image">
+            <img src="images/loca.png" alt="Su altı özel loca alanı">
+          </div>
           <h3>Konsept Özeti</h3>
-          <p>Biz bu projede deniz fenerini ana giriş ve deneyim çekirdeği olarak kurguladık. Fenerin üst katında panoramik bir bar alanı, su altında ise birbirine bağlı tüp modüllerden oluşan özel loca bölümleri tasarladık.</p>
+          <p>
+            Biz bu projede deniz fenerini ana giriş ve deneyim çekirdeği olarak kurguladık. Fenerin üst katında panoramik bir bar alanı,
+            su altında ise birbirine bağlı tüp modüllerden oluşan özel loca bölümleri tasarladık.
+          </p>
           <ul class="quick-points">
             <li>Kıyıdaki karşılama ve vale alanı</li>
             <li>Tekne ile balık avı deneyimi</li>
@@ -642,24 +807,51 @@
         <div class="section-head">
           <div>
             <h3>Konseptimiz</h3>
-            <p>Biz bu projede yalnızca yemek sunan bir restoran değil; deniz, mimari, deneyim ve sürdürülebilirliği aynı hikayede buluşturan bütüncül bir marka kurguladık.</p>
+            <p>
+              Biz bu projede yalnızca yemek sunan bir restoran değil; deniz, mimari, deneyim ve sürdürülebilirliği aynı hikayede buluşturan
+              bütüncül bir marka kurguladık.
+            </p>
           </div>
         </div>
+
         <div class="grid-3">
           <article class="card">
             <h4>Restoran Kimliğimiz</h4>
-            <p>Misafiri yalnızca tüketici olarak değil, deneyimin aktif bir parçası olarak konumlandıran bir restoran modeli geliştirdik. Bu nedenle The Keeper's Catch, klasik bir yeme-içme işletmesinden çok daha fazlasını temsil etmektedir.</p>
-            <div class="tag-row"><span class="tag">Fine Dining</span><span class="tag">Deniz Teması</span><span class="tag">Deneyim</span></div>
+            <p>
+              Misafiri yalnızca tüketici olarak değil, deneyimin aktif bir parçası olarak konumlandıran bir restoran modeli geliştirdik.
+              Bu nedenle The Keeper's Catch, klasik bir yeme-içme işletmesinden çok daha fazlasını temsil etmektedir.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Fine Dining</span>
+              <span class="tag">Deniz Teması</span>
+              <span class="tag">Deneyim</span>
+            </div>
           </article>
+
           <article class="card">
             <h4>Hedef Kitlemiz</h4>
-            <p>Bu konsepti; özgün deneyim arayan turistler, özel gün kutlaması yapmak isteyen misafirler, üst segment müşteri kitlesi ve konsept mekanlara ilgi duyan ziyaretçiler için planladık.</p>
-            <div class="tag-row"><span class="tag">Turistler</span><span class="tag">Çiftler</span><span class="tag">Özel Etkinlik</span></div>
+            <p>
+              Bu konsepti; özgün deneyim arayan turistler, özel gün kutlaması yapmak isteyen misafirler, üst segment müşteri kitlesi
+              ve konsept mekanlara ilgi duyan ziyaretçiler için planladık.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Turistler</span>
+              <span class="tag">Çiftler</span>
+              <span class="tag">Özel Etkinlik</span>
+            </div>
           </article>
+
           <article class="card">
             <h4>Yenilikçi Değerimiz</h4>
-            <p>Balık avı deneyimi, su altı loca sistemi, deniz feneri barı ve sürdürülebilirlik yaklaşımını tek bir konsept altında buluşturarak rakiplerinden ayrılan yenilikçi bir restoran tasarladık.</p>
-            <div class="tag-row"><span class="tag">Catch-to-Table</span><span class="tag">Underwater Dining</span><span class="tag">Sürdürülebilirlik</span></div>
+            <p>
+              Balık avı deneyimi, su altı loca sistemi, deniz feneri barı ve sürdürülebilirlik yaklaşımını tek bir konsept altında
+              buluşturarak rakiplerinden ayrılan yenilikçi bir restoran tasarladık.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Catch-to-Table</span>
+              <span class="tag">Underwater Dining</span>
+              <span class="tag">Sürdürülebilirlik</span>
+            </div>
           </article>
         </div>
       </div>
@@ -670,16 +862,50 @@
         <div class="section-head">
           <div>
             <h3>Misafir Deneyimimiz</h3>
-            <p>Restoran deneyimimizi kıyıdaki karşılama alanından başlayıp tekneyle devam eden ve su altı mekanlarında tamamlanan çok aşamalı bir yolculuk olarak tasarladık.</p>
+            <p>
+              Restoran deneyimimizi kıyıdaki karşılama alanından başlayıp tekneyle devam eden ve su altı mekanlarında tamamlanan
+              çok aşamalı bir yolculuk olarak tasarladık.
+            </p>
           </div>
         </div>
+
         <div class="experience-grid">
-          <div class="image-banner"><img src="images/exterior.png" alt="Genel dış görünüm"></div>
+          <div class="image-banner">
+            <img src="images/exterior.png" alt="Genel dış görünüm">
+          </div>
+
           <div class="timeline">
-            <article class="timeline-item"><div class="step">01</div><div><h4>Karşılama ve Hazırlık</h4><p>Misafirlerimizi özel giriş alanımızda karşılıyor; vale, portmanto ve ekipman teslim hizmetleriyle deneyime hazırlıyoruz.</p></div></article>
-            <article class="timeline-item"><div class="step">02</div><div><h4>Balık Avı Deneyimi</h4><p>Misafirlerimizi rehberli tekne rotasıyla güvenli av alanına çıkarıyor ve yakaladıkları ürünü hikayenin merkezine yerleştiriyoruz.</p></div></article>
-            <article class="timeline-item"><div class="step">03</div><div><h4>Bar ve Bekleme Alanları</h4><p>Balıklar hazırlanırken misafirlerimizi deniz feneri barında veya su altı barında ağırlıyoruz.</p></div></article>
-            <article class="timeline-item"><div class="step">04</div><div><h4>Kişiselleştirilmiş Servis</h4><p>Misafirin avını seçilen pişirme tekniği ve özel eşlikçilerle hazırlayıp su altı localarında servis ediyoruz.</p></div></article>
+            <article class="timeline-item">
+              <div class="step">01</div>
+              <div>
+                <h4>Karşılama ve Hazırlık</h4>
+                <p>Misafirlerimizi özel giriş alanımızda karşılıyor; vale, portmanto ve ekipman teslim hizmetleriyle deneyime hazırlıyoruz.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="step">02</div>
+              <div>
+                <h4>Balık Avı Deneyimi</h4>
+                <p>Misafirlerimizi rehberli tekne rotasıyla güvenli av alanına çıkarıyor ve yakaladıkları ürünü hikayenin merkezine yerleştiriyoruz.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="step">03</div>
+              <div>
+                <h4>Bar ve Bekleme Alanları</h4>
+                <p>Balıklar hazırlanırken misafirlerimizi deniz feneri barında veya su altı barında ağırlıyoruz.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="step">04</div>
+              <div>
+                <h4>Kişiselleştirilmiş Servis</h4>
+                <p>Misafirin avını seçilen pişirme tekniği ve özel eşlikçilerle hazırlayıp su altı localarında servis ediyoruz.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -693,14 +919,19 @@
             <p>Genel dış görünümden özel localara, fener barından mutfak operasyonuna kadar tüm alanları aynı marka diliyle kurguladık.</p>
           </div>
         </div>
+
         <div class="showcase-grid">
           <article class="image-card tall">
             <img src="images/exterior.png" alt="Genel dış görünüm">
             <div class="image-overlay">
               <h4>Genel Dış Görünüm</h4>
-              <p>Kayalık üzerindeki deniz feneri ana çekirdek olarak yükselirken, su altında birbirine bağlı şeffaf tüpler restoranın deneyim alanlarını oluşturur.</p>
+              <p>
+                Kayalık üzerindeki deniz feneri ana çekirdek olarak yükselirken, su altında birbirine bağlı şeffaf tüpler restoranın
+                deneyim alanlarını oluşturur.
+              </p>
             </div>
           </article>
+
           <div class="stack">
             <article class="image-card">
               <img src="images/loca.png" alt="Su altı loca">
@@ -709,6 +940,7 @@
                 <p>Özel locaları mahremiyet, deniz yaşamı gözlemi ve fine dining servis düzeniyle tasarladık.</p>
               </div>
             </article>
+
             <article class="image-card">
               <img src="images/lighthouse-bar.png" alt="Deniz feneri barı">
               <div class="image-overlay">
@@ -723,7 +955,10 @@
 
     <section>
       <div class="container luxury-grid reveal">
-        <article class="image-banner"><img src="images/underwater-bar.png" alt="Su altı barı"></article>
+        <article class="image-banner">
+          <img src="images/underwater-bar.png" alt="Su altı barı">
+        </article>
+
         <article class="card">
           <div class="section-head" style="margin-bottom:10px">
             <div>
@@ -743,7 +978,10 @@
 
     <section>
       <div class="container luxury-grid reveal">
-        <article class="image-banner"><img src="images/kitchen.png" alt="Mutfak alanı"></article>
+        <article class="image-banner">
+          <img src="images/kitchen.png" alt="Mutfak alanı">
+        </article>
+
         <article class="card">
           <div class="section-head" style="margin-bottom:10px">
             <div>
@@ -766,20 +1004,66 @@
         <div class="section-head">
           <div>
             <h3>Sürdürülebilirlik Stratejilerimiz</h3>
-            <p>Biz, sürdürülebilirliği yalnızca malzeme seçimiyle sınırlı tutmuyor; atık yönetimi, ekosistem desteği, yapay yaşam alanları oluşturma ve deniz temizleme projelerine katkı sağlama gibi başlıklarla bütüncül bir yaklaşım benimsiyoruz.</p>
+            <p>
+              Biz, sürdürülebilirliği yalnızca malzeme seçimiyle sınırlı tutmuyor; atık yönetimi, ekosistem desteği,
+              yapay yaşam alanları oluşturma ve deniz temizleme projelerine katkı sağlama gibi başlıklarla bütüncül bir yaklaşım benimsiyoruz.
+            </p>
           </div>
         </div>
+
         <div class="sustain-layout">
           <div class="sustain-cards">
-            <article class="sustain-card"><h4>Atıklardan Balık Yemi Üretimi</h4><p>Balık temizleme sürecinde ortaya çıkan kemik, kafa, deri ve küçük işleme artıklarını ayrıştırıyor; uygun işlemlerden geçirerek protein değeri yüksek balık yemi hammaddesine dönüştürmeyi planlıyoruz.</p></article>
-            <article class="sustain-card"><h4>Yapay Mercan ve Balık Yuvalama Alanları</h4><p>Uygun sürdürülebilir malzemelerle yapay resif modülleri oluşturmayı ve belirlenen alanlara yerleştirerek balıkların yuvalayabileceği mikro habitatlar geliştirmeyi hedefliyoruz.</p></article>
-            <article class="sustain-card"><h4>Deniz Temizleme Fonuna Katkı</h4><p>Elde ettiğimiz gelirin belirli bir bölümünü, deniz yüzeyindeki atıkların toplanmasına ve kıyı ekosisteminin korunmasına yönelik çevresel projelere ayırmayı planlıyoruz.</p></article>
-            <article class="sustain-card"><h4>Kontrollü Av ve Bilinçlendirme</h4><p>Av miktarını kontrol ediyor, koruma altındaki türlerden kaçınıyor ve misafirlerimize sürdürülebilir balıkçılık hakkında bilgilendirme sunuyoruz.</p></article>
-            <article class="sustain-card"><h4>Kaynak Verimliliği</h4><p>LED aydınlatma, düşük su tüketimli sistemler, porsiyon planlaması, mevsimsel ürün kullanımı ve kontrollü tedarik zinciri ile enerji ve kaynak kullanımını optimize ediyoruz.</p></article>
+            <article class="sustain-card">
+              <h4>Atıklardan Balık Yemi Üretimi</h4>
+              <p>
+                Balık temizleme sürecinde ortaya çıkan kemik, kafa, deri ve küçük işleme artıklarını ayrıştırıyor; uygun işlemlerden geçirerek
+                protein değeri yüksek balık yemi hammaddesine dönüştürmeyi planlıyoruz.
+              </p>
+            </article>
+
+            <article class="sustain-card">
+              <h4>Yapay Mercan ve Balık Yuvalama Alanları</h4>
+              <p>
+                Uygun sürdürülebilir malzemelerle yapay resif modülleri oluşturmayı ve belirlenen alanlara yerleştirerek balıkların
+                yuvalayabileceği mikro habitatlar geliştirmeyi hedefliyoruz.
+              </p>
+            </article>
+
+            <article class="sustain-card">
+              <h4>Deniz Temizleme Fonuna Katkı</h4>
+              <p>
+                Elde ettiğimiz gelirin belirli bir bölümünü, deniz yüzeyindeki atıkların toplanmasına ve kıyı ekosisteminin korunmasına
+                yönelik çevresel projelere ayırmayı planlıyoruz.
+              </p>
+            </article>
+
+            <article class="sustain-card">
+              <h4>Kontrollü Av ve Bilinçlendirme</h4>
+              <p>
+                Av miktarını kontrol ediyor, koruma altındaki türlerden kaçınıyor ve misafirlerimize sürdürülebilir balıkçılık hakkında
+                bilgilendirme sunuyoruz.
+              </p>
+            </article>
+
+            <article class="sustain-card">
+              <h4>Kaynak Verimliliği</h4>
+              <p>
+                LED aydınlatma, düşük su tüketimli sistemler, porsiyon planlaması, mevsimsel ürün kullanımı ve kontrollü tedarik zinciri
+                ile enerji ve kaynak kullanımını optimize ediyoruz.
+              </p>
+            </article>
           </div>
+
           <div class="sustain-gallery">
-            <div class="sustain-image large"><img src="images/underwater-bar.png" alt="Su altı bar ve ekosistem"><div class="image-label">Ekosistemle uyumlu deneyim alanı</div></div>
-            <div class="sustain-image"><img src="images/loca.png" alt="Su altı loca ve deniz yaşamı"><div class="image-label">Yapay resif ve yuvalama vizyonu</div></div>
+            <div class="sustain-image large">
+              <img src="images/underwater-bar.png" alt="Su altı bar ve ekosistem">
+              <div class="image-label">Ekosistemle uyumlu deneyim alanı</div>
+            </div>
+
+            <div class="sustain-image">
+              <img src="images/loca.png" alt="Su altı loca ve deniz yaşamı">
+              <div class="image-label">Yapay resif ve yuvalama vizyonu</div>
+            </div>
           </div>
         </div>
       </div>
@@ -789,24 +1073,59 @@
       <div class="container contact-layout reveal">
         <article class="contact-card">
           <h3 style="margin-bottom:8px">Bizimle İletişime Geçin</h3>
-          <p>Bu alan proje tanıtımı amacıyla örnek olarak hazırlanmıştır. Misafir deneyimini dijital ortamda nasıl sunabileceğimizi göstermek için kullanılmıştır.</p>
+          <p>
+            Bu alan proje tanıtımı amacıyla örnek olarak hazırlanmıştır. Misafir deneyimini dijital ortamda nasıl sunabileceğimizi göstermek için kullanılmıştır.
+          </p>
+
           <form class="booking-form" onsubmit="event.preventDefault(); alert('Rezervasyon talebiniz alınmıştır. Bu form proje tanıtımı amacıyla örnek olarak çalışmaktadır.');">
-            <label>Ad Soyad<input type="text" placeholder="Adınızı girin" required></label>
-            <label>Kişi Sayısı<select required><option value="">Seçiniz</option><option>2 Kişi</option><option>4 Kişi</option><option>6 Kişi</option><option>8+ Kişi</option></select></label>
-            <label>Deneyim Tercihi<select required><option value="">Seçiniz</option><option>Catch-to-Table Deneyimi</option><option>Fener Üst Kat Bar Deneyimi</option><option>Su Altı Loca Akşam Yemeği</option></select></label>
-            <label>Mesaj<textarea placeholder="Özel notunuzu yazın"></textarea></label>
+            <label>
+              Ad Soyad
+              <input type="text" placeholder="Adınızı girin" required>
+            </label>
+
+            <label>
+              Kişi Sayısı
+              <select required>
+                <option value="">Seçiniz</option>
+                <option>2 Kişi</option>
+                <option>4 Kişi</option>
+                <option>6 Kişi</option>
+                <option>8+ Kişi</option>
+              </select>
+            </label>
+
+            <label>
+              Deneyim Tercihi
+              <select required>
+                <option value="">Seçiniz</option>
+                <option>Catch-to-Table Deneyimi</option>
+                <option>Fener Üst Kat Bar Deneyimi</option>
+                <option>Su Altı Loca Akşam Yemeği</option>
+              </select>
+            </label>
+
+            <label>
+              Mesaj
+              <textarea placeholder="Özel notunuzu yazın"></textarea>
+            </label>
+
             <button type="submit">Talep Gönder</button>
           </form>
         </article>
+
         <article class="contact-card">
-          <h3 style="margin-bottom:8px">Projeyi Güçlendiren Unsurlar</h3>
-          <p>Bu konsept, yenilikçi mutfak dersi kapsamında hem görsel hem kavramsal açıdan güçlü bir sunum malzemesi üretir.</p>
+          <h3 style="margin-bottom:8px">Deneyim Anlayışımız</h3>
+          <p>
+            Biz, The Keeper's Catch ile misafirlerimize yalnızca yemek sunmayı değil; onları hikayenin bir parçası haline getiren,
+            denizle doğrudan bağ kuran ve sürdürülebilirliği merkeze alan özel bir deneyim yaşatmayı amaçlıyoruz.
+          </p>
+
           <ul class="muted-list">
-            <li>Deniz feneri ve su altı yerleşimiyle güçlü mekan hikayesi kurar.</li>
-            <li>Misafirin sürece katıldığı özgün bir restoran deneyimi sunar.</li>
-            <li>Sürdürülebilirlik bölümünde atık dönüşümü, deniz temizleme desteği ve ekosistem katkısı net biçimde anlatılır.</li>
-            <li>Sunum, rapor ve web sitesi arasında bütünlük sağlar.</li>
-            <li>Görsel olarak akılda kalıcı ve premium bir izlenim bırakır.</li>
+            <li>Misafirlerimizi kıyıdaki karşılama alanından başlayarak planlı ve özel bir deneyim akışına dahil ediyoruz.</li>
+            <li>Balık avı, deniz feneri barı ve su altı localarını aynı hikaye içinde birleştiriyoruz.</li>
+            <li>Tutulan balıkların hazırlanma sürecini, kişiselleştirilmiş bir fine dining deneyimine dönüştürüyoruz.</li>
+            <li>Atık dönüşümü, yapay resif yaklaşımı ve deniz temizleme desteğiyle çevresel sorumluluğumuzu güçlendiriyoruz.</li>
+            <li>Mimari, servis ve atmosferi bir araya getirerek akılda kalıcı, premium ve yenilikçi bir restoran modeli sunuyoruz.</li>
           </ul>
         </article>
       </div>
@@ -824,11 +1143,13 @@
 
   <script>
     const reveals = document.querySelectorAll('.reveal');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.12 });
+
     reveals.forEach((item) => observer.observe(item));
 
     const header = document.getElementById('siteHeader');
